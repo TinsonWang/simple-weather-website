@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Simple Weather Website - Test</title>
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <fieldset>
+                <% /* This form is submitting a post request to the '/' route */ %>
+                <form action="/" method="post">
+                    <input type="text" class="ghost-input" name="city" placeholder="Enter a city" required>
+                    <input type="submit" class="ghost-button" value="Get Weather">
+                </form>
+
+                <% /* In EJS, anything between the <'%'...'%'> brackets gets executed
+                If the brackets also includes an equal sign like <'%=' ... '%'>, then that code will add HTML to the result
+                In this code, if either variables are null nothing happens
+                If it has a value, then a paragraph of that value is added */ %>
+
+                <% /* Reference error saying a variable was not defined was resolved by substituting said variables with
+                'locals.variable' */ %>
+                <%if(locals.weather !== null){%>
+                    <p>
+                        <%= locals.weather %>
+                    </p>
+                <%}%>
+
+                <%if(locals.error !== null){%>
+                    <p>
+                        <%= locals.error %>
+                    </p>
+                <%}%>
+
+            </fieldset>
+        </div>
+    </body>
+
+</html>

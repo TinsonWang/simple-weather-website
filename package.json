@@ -1,0 +1,24 @@
+{
+  "name": "simple-weather-website",
+  "version": "1.0.0",
+  "description": "An extension of the previous 'simple-nodejs-weather-app' project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinsonWang/simple-weather-website.git"
+  },
+  "author": "Tinson Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TinsonWang/simple-weather-website/issues"
+  },
+  "homepage": "https://github.com/TinsonWang/simple-weather-website#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
